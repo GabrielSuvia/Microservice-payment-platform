@@ -12,7 +12,9 @@ export class PaymentController {
     }
     @Post('google-pay')
     processGooglePay(@Body() googlePayDto: IGooglePayDto) {
-      return this.paymentService.processGooglePay(this.responseTransaction);
+        //console.log("Respuesta exitosa",googlePayDto)
+        
+      return this.paymentService.processGooglePay(googlePayDto);
     }
 
 }
